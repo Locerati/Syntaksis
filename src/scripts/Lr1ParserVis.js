@@ -335,7 +335,7 @@ export default function (document) {
       });
       return;
     }
-    let input = scan(inputStr);
+    let input = scan(inputStr); 
     if (input === false) {
       _parseSteps.push({
         stateStack: [],
@@ -671,18 +671,33 @@ export default function (document) {
 
   // Public API for samples
 
+  // this.sampleGrammar = () => (
+  //   "S' G\n" +
+  //   'G E = E\n' +
+  //   'G id\n' +
+  //   'E E + T\n' +
+  //   'E T\n' +
+  //   'T T * id\n' +
+  //   'T id'
+  // );
   this.sampleGrammar = () => (
     "S' G\n" +
-    'G E = E\n' +
-    'G id\n' +
+    'G E := E ; G\n' +
+    'G  \n' +
     'E E + T\n' +
     'E T\n' +
+    'T ( E )\n' +
     'T T * id\n' +
+    'T T / id\n' +
+    'T T - id\n' +
     'T id'
   );
 
+  // this.sampleInput = () => (
+  //   'id = id + id * id'
+  // );
   this.sampleInput = () => (
-    'id = id + id * id'
+    'id := id * id ; id := id + ( id + id ) * id ;'
   );
 
 };

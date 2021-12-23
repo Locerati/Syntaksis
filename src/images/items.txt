@@ -1,0 +1,573 @@
+I0 S' → •G,$
+G → •E:=E;G,$
+G → •,$
+E → •E+T,:=
+E → •T,:=
+E → •E+T,+
+E → •T,+
+T → •(E),:=
+T → •T*id,:=
+T → •T/id,:=
+T → •T-id,:=
+T → •id,:=
+T → •(E),+
+T → •T*id,+
+T → •T/id,+
+T → •T-id,+
+T → •id,+
+T → •(E),*
+T → •T*id,*
+T → •T/id,*
+T → •T-id,*
+T → •id,*
+T → •(E),/
+T → •T*id,/
+T → •T/id,/
+T → •T-id,/
+T → •id,/
+T → •(E),-
+T → •T*id,-
+T → •T/id,-
+T → •T-id,-
+T → •id,-
+
+I1 S' → G•,$
+
+I2 G → E•:=E;G,$
+E → E•+T,:=
+E → E•+T,+
+
+I3 E → T•,:=
+E → T•,+
+T → T•*id,:=
+T → T•/id,:=
+T → T•-id,:=
+T → T•*id,+
+T → T•/id,+
+T → T•-id,+
+T → T•*id,*
+T → T•/id,*
+T → T•-id,*
+T → T•*id,/
+T → T•/id,/
+T → T•-id,/
+T → T•*id,-
+T → T•/id,-
+T → T•-id,-
+
+I4 T → (•E),:=
+T → (•E),+
+T → (•E),*
+T → (•E),/
+T → (•E),-
+E → •E+T,)
+E → •T,)
+E → •E+T,+
+E → •T,+
+T → •(E),)
+T → •T*id,)
+T → •T/id,)
+T → •T-id,)
+T → •id,)
+T → •(E),+
+T → •T*id,+
+T → •T/id,+
+T → •T-id,+
+T → •id,+
+T → •(E),*
+T → •T*id,*
+T → •T/id,*
+T → •T-id,*
+T → •id,*
+T → •(E),/
+T → •T*id,/
+T → •T/id,/
+T → •T-id,/
+T → •id,/
+T → •(E),-
+T → •T*id,-
+T → •T/id,-
+T → •T-id,-
+T → •id,-
+
+I5 T → id•,:=
+T → id•,+
+T → id•,*
+T → id•,/
+T → id•,-
+
+I6 G → E:=•E;G,$
+E → •E+T,;
+E → •T,;
+E → •E+T,+
+E → •T,+
+T → •(E),;
+T → •T*id,;
+T → •T/id,;
+T → •T-id,;
+T → •id,;
+T → •(E),+
+T → •T*id,+
+T → •T/id,+
+T → •T-id,+
+T → •id,+
+T → •(E),*
+T → •T*id,*
+T → •T/id,*
+T → •T-id,*
+T → •id,*
+T → •(E),/
+T → •T*id,/
+T → •T/id,/
+T → •T-id,/
+T → •id,/
+T → •(E),-
+T → •T*id,-
+T → •T/id,-
+T → •T-id,-
+T → •id,-
+
+I7 E → E+•T,:=
+E → E+•T,+
+T → •(E),:=
+T → •T*id,:=
+T → •T/id,:=
+T → •T-id,:=
+T → •id,:=
+T → •(E),+
+T → •T*id,+
+T → •T/id,+
+T → •T-id,+
+T → •id,+
+T → •(E),*
+T → •T*id,*
+T → •T/id,*
+T → •T-id,*
+T → •id,*
+T → •(E),/
+T → •T*id,/
+T → •T/id,/
+T → •T-id,/
+T → •id,/
+T → •(E),-
+T → •T*id,-
+T → •T/id,-
+T → •T-id,-
+T → •id,-
+
+I8 T → T*•id,:=
+T → T*•id,+
+T → T*•id,*
+T → T*•id,/
+T → T*•id,-
+
+I9 T → T/•id,:=
+T → T/•id,+
+T → T/•id,*
+T → T/•id,/
+T → T/•id,-
+
+I10 T → T-•id,:=
+T → T-•id,+
+T → T-•id,*
+T → T-•id,/
+T → T-•id,-
+
+I11 T → (E•),:=
+T → (E•),+
+T → (E•),*
+T → (E•),/
+T → (E•),-
+E → E•+T,)
+E → E•+T,+
+
+I12 E → T•,)
+E → T•,+
+T → T•*id,)
+T → T•/id,)
+T → T•-id,)
+T → T•*id,+
+T → T•/id,+
+T → T•-id,+
+T → T•*id,*
+T → T•/id,*
+T → T•-id,*
+T → T•*id,/
+T → T•/id,/
+T → T•-id,/
+T → T•*id,-
+T → T•/id,-
+T → T•-id,-
+
+I13 T → (•E),)
+T → (•E),+
+T → (•E),*
+T → (•E),/
+T → (•E),-
+E → •E+T,)
+E → •T,)
+E → •E+T,+
+E → •T,+
+T → •(E),)
+T → •T*id,)
+T → •T/id,)
+T → •T-id,)
+T → •id,)
+T → •(E),+
+T → •T*id,+
+T → •T/id,+
+T → •T-id,+
+T → •id,+
+T → •(E),*
+T → •T*id,*
+T → •T/id,*
+T → •T-id,*
+T → •id,*
+T → •(E),/
+T → •T*id,/
+T → •T/id,/
+T → •T-id,/
+T → •id,/
+T → •(E),-
+T → •T*id,-
+T → •T/id,-
+T → •T-id,-
+T → •id,-
+
+I14 T → id•,)
+T → id•,+
+T → id•,*
+T → id•,/
+T → id•,-
+
+I15 G → E:=E•;G,$
+E → E•+T,;
+E → E•+T,+
+
+I16 E → T•,;
+E → T•,+
+T → T•*id,;
+T → T•/id,;
+T → T•-id,;
+T → T•*id,+
+T → T•/id,+
+T → T•-id,+
+T → T•*id,*
+T → T•/id,*
+T → T•-id,*
+T → T•*id,/
+T → T•/id,/
+T → T•-id,/
+T → T•*id,-
+T → T•/id,-
+T → T•-id,-
+
+I17 T → (•E),;
+T → (•E),+
+T → (•E),*
+T → (•E),/
+T → (•E),-
+E → •E+T,)
+E → •T,)
+E → •E+T,+
+E → •T,+
+T → •(E),)
+T → •T*id,)
+T → •T/id,)
+T → •T-id,)
+T → •id,)
+T → •(E),+
+T → •T*id,+
+T → •T/id,+
+T → •T-id,+
+T → •id,+
+T → •(E),*
+T → •T*id,*
+T → •T/id,*
+T → •T-id,*
+T → •id,*
+T → •(E),/
+T → •T*id,/
+T → •T/id,/
+T → •T-id,/
+T → •id,/
+T → •(E),-
+T → •T*id,-
+T → •T/id,-
+T → •T-id,-
+T → •id,-
+
+I18 T → id•,;
+T → id•,+
+T → id•,*
+T → id•,/
+T → id•,-
+
+I19 E → E+T•,:=
+E → E+T•,+
+T → T•*id,:=
+T → T•/id,:=
+T → T•-id,:=
+T → T•*id,+
+T → T•/id,+
+T → T•-id,+
+T → T•*id,*
+T → T•/id,*
+T → T•-id,*
+T → T•*id,/
+T → T•/id,/
+T → T•-id,/
+T → T•*id,-
+T → T•/id,-
+T → T•-id,-
+
+I20 T → T*id•,:=
+T → T*id•,+
+T → T*id•,*
+T → T*id•,/
+T → T*id•,-
+
+I21 T → T/id•,:=
+T → T/id•,+
+T → T/id•,*
+T → T/id•,/
+T → T/id•,-
+
+I22 T → T-id•,:=
+T → T-id•,+
+T → T-id•,*
+T → T-id•,/
+T → T-id•,-
+
+I23 E → E+•T,)
+E → E+•T,+
+T → •(E),)
+T → •T*id,)
+T → •T/id,)
+T → •T-id,)
+T → •id,)
+T → •(E),+
+T → •T*id,+
+T → •T/id,+
+T → •T-id,+
+T → •id,+
+T → •(E),*
+T → •T*id,*
+T → •T/id,*
+T → •T-id,*
+T → •id,*
+T → •(E),/
+T → •T*id,/
+T → •T/id,/
+T → •T-id,/
+T → •id,/
+T → •(E),-
+T → •T*id,-
+T → •T/id,-
+T → •T-id,-
+T → •id,-
+
+I24 T → (E)•,:=
+T → (E)•,+
+T → (E)•,*
+T → (E)•,/
+T → (E)•,-
+
+I25 T → T*•id,)
+T → T*•id,+
+T → T*•id,*
+T → T*•id,/
+T → T*•id,-
+
+I26 T → T/•id,)
+T → T/•id,+
+T → T/•id,*
+T → T/•id,/
+T → T/•id,-
+
+I27 T → T-•id,)
+T → T-•id,+
+T → T-•id,*
+T → T-•id,/
+T → T-•id,-
+
+I28 T → (E•),)
+T → (E•),+
+T → (E•),*
+T → (E•),/
+T → (E•),-
+E → E•+T,)
+E → E•+T,+
+
+I29 G → E:=E;•G,$
+G → •E:=E;G,$
+G → •,$
+E → •E+T,:=
+E → •T,:=
+E → •E+T,+
+E → •T,+
+T → •(E),:=
+T → •T*id,:=
+T → •T/id,:=
+T → •T-id,:=
+T → •id,:=
+T → •(E),+
+T → •T*id,+
+T → •T/id,+
+T → •T-id,+
+T → •id,+
+T → •(E),*
+T → •T*id,*
+T → •T/id,*
+T → •T-id,*
+T → •id,*
+T → •(E),/
+T → •T*id,/
+T → •T/id,/
+T → •T-id,/
+T → •id,/
+T → •(E),-
+T → •T*id,-
+T → •T/id,-
+T → •T-id,-
+T → •id,-
+
+I30 E → E+•T,;
+E → E+•T,+
+T → •(E),;
+T → •T*id,;
+T → •T/id,;
+T → •T-id,;
+T → •id,;
+T → •(E),+
+T → •T*id,+
+T → •T/id,+
+T → •T-id,+
+T → •id,+
+T → •(E),*
+T → •T*id,*
+T → •T/id,*
+T → •T-id,*
+T → •id,*
+T → •(E),/
+T → •T*id,/
+T → •T/id,/
+T → •T-id,/
+T → •id,/
+T → •(E),-
+T → •T*id,-
+T → •T/id,-
+T → •T-id,-
+T → •id,-
+
+I31 T → T*•id,;
+T → T*•id,+
+T → T*•id,*
+T → T*•id,/
+T → T*•id,-
+
+I32 T → T/•id,;
+T → T/•id,+
+T → T/•id,*
+T → T/•id,/
+T → T/•id,-
+
+I33 T → T-•id,;
+T → T-•id,+
+T → T-•id,*
+T → T-•id,/
+T → T-•id,-
+
+I34 T → (E•),;
+T → (E•),+
+T → (E•),*
+T → (E•),/
+T → (E•),-
+E → E•+T,)
+E → E•+T,+
+
+I35 E → E+T•,)
+E → E+T•,+
+T → T•*id,)
+T → T•/id,)
+T → T•-id,)
+T → T•*id,+
+T → T•/id,+
+T → T•-id,+
+T → T•*id,*
+T → T•/id,*
+T → T•-id,*
+T → T•*id,/
+T → T•/id,/
+T → T•-id,/
+T → T•*id,-
+T → T•/id,-
+T → T•-id,-
+
+I36 T → T*id•,)
+T → T*id•,+
+T → T*id•,*
+T → T*id•,/
+T → T*id•,-
+
+I37 T → T/id•,)
+T → T/id•,+
+T → T/id•,*
+T → T/id•,/
+T → T/id•,-
+
+I38 T → T-id•,)
+T → T-id•,+
+T → T-id•,*
+T → T-id•,/
+T → T-id•,-
+
+I39 T → (E)•,)
+T → (E)•,+
+T → (E)•,*
+T → (E)•,/
+T → (E)•,-
+
+I40 G → E:=E;G•,$
+
+I41 E → E+T•,;
+E → E+T•,+
+T → T•*id,;
+T → T•/id,;
+T → T•-id,;
+T → T•*id,+
+T → T•/id,+
+T → T•-id,+
+T → T•*id,*
+T → T•/id,*
+T → T•-id,*
+T → T•*id,/
+T → T•/id,/
+T → T•-id,/
+T → T•*id,-
+T → T•/id,-
+T → T•-id,-
+
+I42 T → T*id•,;
+T → T*id•,+
+T → T*id•,*
+T → T*id•,/
+T → T*id•,-
+
+I43 T → T/id•,;
+T → T/id•,+
+T → T/id•,*
+T → T/id•,/
+T → T/id•,-
+
+I44 T → T-id•,;
+T → T-id•,+
+T → T-id•,*
+T → T-id•,/
+T → T-id•,-
+
+I45 T → (E)•,;
+T → (E)•,+
+T → (E)•,*
+T → (E)•,/
+T → (E)•,-
